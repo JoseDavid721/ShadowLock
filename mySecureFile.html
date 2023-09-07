@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A page...</title>
+</head>
+<body>
+    <h1>Comentarios</h1>
+    
+    <div id="comentarios">
+        <!-- Este es un comentario legítimo -->
+        <p>Comentario 1: ¡Qué gran sitio web!</p>
+        <p>Comentario 2: Esta página es increíble.</p>
+    </div>
+    
+    <h2>Añadir un Comentario</h2>
+    <form>
+        <label for="nuevoComentario">Escribe tu comentario:</label>
+        <input type="text" id="nuevoComentario" name="nuevoComentario">
+        <input type="submit" value="Añadir Comentario">
+    </form>
+    
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var nuevoComentario = document.getElementById("nuevoComentario").value;
+            var comentarioHTML = "<p>Comentario Nuevo: " + nuevoComentario + "</p>";
+            var comentariosDiv = document.getElementById("comentarios");
+            comentariosDiv.insertBefore(createElementFromHTML(comentarioHTML), comentariosDiv.firstChild);
+        });
+        
+        function createElementFromHTML(htmlString) {
+            var div = document.createElement('div');
+            div.innerHTML = htmlString.trim();
+            return div.firstChild; 
+        }
+    </script>
+</body>
+</html>
