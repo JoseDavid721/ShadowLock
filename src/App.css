@@ -103,6 +103,11 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.barrita{
+  padding-top: 2rem;
+  padding-left: 10rem;
+}
 footer.footer{
   background-color: #081a2ee6;
 }
@@ -3159,7 +3164,13 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: none;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  text-decoration: underline;
+  text-decoration: none;
+  background: #1727a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1727a1, #9932cc); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1727a1, #9932cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .btn-link:focus-visible {
   color: var(--bs-btn-color);
@@ -3777,6 +3788,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+  
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -3795,6 +3807,7 @@ textarea.form-control-lg {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+  
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -3804,6 +3817,12 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+  background: #1727a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1727a1, #9932cc); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1727a1, #9932cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -10856,8 +10875,8 @@ textarea.form-control-lg {
   }
 }
 .features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .features-icons .features-icons-item {
   max-width: 20rem;
@@ -10872,6 +10891,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
+  background-image: url('./background_shadow.jpg');
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -10898,6 +10918,66 @@ header.masthead h1, header.masthead .h1 {
     font-size: 3rem;
   }
 }
+
+.spinner {
+   width: 57.6px;
+   height: 57.6px;
+   animation: spinner-y0fdc1 2.4s infinite ease;
+   transform-style: preserve-3d;
+   margin-left: 18rem;
+   margin-top: 3rem;
+}
+
+.spinner > div {
+   background-color: rgba(224,0,0,0.2);
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   border: 2.9px solid #e00000;
+}
+
+.spinner div:nth-of-type(1) {
+   transform: translateZ(-28.8px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+   transform: rotateY(-270deg) translateX(50%);
+   transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+   transform: rotateY(270deg) translateX(-50%);
+   transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+   transform: rotateX(90deg) translateY(-50%);
+   transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+   transform: rotateX(-90deg) translateY(50%);
+   transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+   transform: translateZ(28.8px);
+}
+
+@keyframes spinner-y0fdc1 {
+   0% {
+      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+   }
+
+   50% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+   }
+
+   100% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+   }
+}
+
 
 .showcase .showcase-text {
   padding: 3rem;

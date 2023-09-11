@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+document.body.style = 'background: #000000;';
 
 function App() {
   return (
@@ -34,6 +36,24 @@ function App() {
                                 <input type="file" class="custom-file-input" id="inputGroupFile02"></input>
                                 <button class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02" ><n>UPLOAD</n></button>
                             </div>
+                            <div class='barrita'>
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="drag__bar" id="myRange" oninput='changeColor()'></input>
+                            </div>
+                            <datalist id="ticks">
+                            <option value="0" label="0">Menos Creatividad</option>
+                            <option value="1.57" label="π/2">Más creatividad</option>
+                            <option value="3.14" label="π"></option>
+                            </datalist>
+                            </div>
+                            </div>
+                            <div class="spinner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                             </div>
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
@@ -56,21 +76,21 @@ function App() {
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
                             <h3>Findings</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                            <p class="lead mb-0">Assists in the detection and correction of vulnerabilities in the code, which are essential for maintaining the confidentiality, integrity, and availability of data and systems, as well as ensuring that the software operates efficiently and securely at all times.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
                             <h3>Changes</h3>
-                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                            <p class="lead mb-0">SecureDevScript provides valuable results, including a secure version of the submitted code, highlighted with comments detailing the changes made to eliminate vulnerabilities. Additionally, it offers a descriptive summary of the alterations performed. Users can download the enhanced code and gain insights into the security improvements made to their software, ensuring a safer and more reliable application.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                            <h3>Pseudo code</h3>
-                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                            <h3>More info</h3>
+                            <p class="lead mb-0">Our website also provides you with URLs where you can delve deeper into the vulnerabilities present in your code. Additionally, you can adjust the creativity of the model, meaning how risky the LLM is going to be.</p>
                         </div>
                     </div>
                 </div>
