@@ -20,7 +20,7 @@ SecureDevScript is a powerful web application designed to simplify and enhance t
 
 ## Installation
 
-Follow these steps to set up and run SecureDevScript locally:
+Follow these steps to set up and run SecureDevScript locally if you use Windows:
 
 1. Clone the repository to your local machine:
 
@@ -55,3 +55,4 @@ Download the secure code and view the summary.
 
 ## Important
 The application was designed so that it will work in the same tab, so it is recommended to always use the web application in the same tab and not open the application in different parts, to avoid any type of error or unforeseen events.
+
